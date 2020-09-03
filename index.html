@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>GeoAR.js demo</title>
-    <!--<script src='https://aframe.io/releases/1.0.4/aframe.min.js'></script>-->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-nft.js">
-    
-</head>
+  </head>
 
-<body style='margin: 0; overflow: hidden;'>
+  <body style="margin: 0; overflow: hidden;">
     <a-scene
-        vr-mode-ui="enabled: false"
-	embedded
-        arjs='sourceType: webcam; debugUIEnabled: false;'>
-        
-	<a-text
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; debugUIEnabled: false;"
+    >
+      <a-text
         value="This content will always face you."
         look-at="[gps-camera]"
         scale="120 120 120"
-        gps-entity-place="latitude: 54.386481; longitude: 18.579424;"
+        gps-entity-place="latitude: 54.386596; longitude: 18.579600;"
       ></a-text>
-	    
-	    
-        <a-camera gps-camera rotation-reader ></a-camera>
-	<a-box color="red" width="3" gps-entity-place="latitude:  54.386481; longitude: 18.579424;" position="0 10 0" ></a-box> 
-	<a-box color="blue" width="5" gps-entity-place="latitude:   54.386703; longitude: 18.579697;" ></a-box> 
-	<a-entity gltf-model="./assets/cube.gltf" rotation="0 0 0" scale="5 5 5" gps-entity-place="latitude: 54.386569; longitude: 18.579453;" /></a-entity>
+      <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
-</body>
+  </body>
+</html>
